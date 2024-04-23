@@ -28,15 +28,15 @@ export default async function Home() {
 
     <form>
       <input 
-      type="url"
-      name="url"
+      type="text"
+      name="website"
       id="url"
       placeholder="https://example.com"
       required
       />
     </form>
 
-    <button type="submit">Check it</button>
+    <button type="submit" value="check website">Check it</button>
     </>
   );
 }
