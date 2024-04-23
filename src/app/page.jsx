@@ -8,8 +8,8 @@ export const metadata = {
   description: "Description",
 };
 
-export default async function LandingPage(){
-  const params = new URLSearchParams({ searchParams });
+export default async function LandingPage({searchParams}){
+  const params = new URLSearchParams(searchParams);
   const response = await fetch(`https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`);
   const data = await response.json();
 
