@@ -8,14 +8,9 @@ export const metadata = {
   description: "Description",
 };
 
-export default function LandingPage(){
-  const params = new URLSearchParams({
-
-  });
-
-  const response = await fetch(
-    `https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`,
-  );
+export default async function LandingPage(){
+  const params = new URLSearchParams({ searchParams });
+  const response = await fetch(`https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`);
   const data = await response.json();
 
   return (
@@ -32,11 +27,11 @@ export default function LandingPage(){
       placeholder="https://example.com"
       required
       />
-
-            <button type="submit" value="check website">Check website</button>
+      
+    <button type="submit" value="check website">Check website</button>
     
     </form>
-    
+
 
     </>
   );
