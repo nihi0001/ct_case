@@ -1,6 +1,6 @@
 "use client";
 
 export default function Error(){
-    return <h1>test test</h1>;
+    return <h1>Error side</h1>;
         
 }

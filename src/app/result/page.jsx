@@ -1,4 +1,6 @@
-import Image from "next/image";
+
+ import Image from "next/image";
+
 
 // Revalidate route every 30 minutes
 //export const revalidate = 1800;
@@ -22,4 +24,4 @@ export default async function Page({ searchParams }) {
       />
     </main>
   );
-}
+} 

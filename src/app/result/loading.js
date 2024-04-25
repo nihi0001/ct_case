@@ -1,24 +1,22 @@
-import Skeleton from "react-laoding-skeleton";
-import React from 'react';
+"use client"
+import GridLoader from "react-spinners/GridLoader";
 
-export default function loading() {
+
+
+function loading() {
   return (
-    <main className=''>
-        <header className=''>
-            <div className=''>
-                <h1 className=''>
-                <Skeleton />
-                </h1>
-                <Skeleton width={} height={} circle={}/>
-            </div>
-            <div className=''>
-            <Skeleton height={}/>
-            </div>
-        </header>
-
-        <div className=''>
-        <Skeleton count={}/>
-        </div>
-    </main>
-  );
+    <div className="flex justify-center items-center h-screen">
+      
+      <GridLoader
+      color="blue"
+      loading={true}
+      
+      size={60}
+      aria-label="Loading Spinner"
+      data-testid="loader"/>
+    </div>
+  )
 }
+
+export default loading
+

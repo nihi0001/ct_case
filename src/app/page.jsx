@@ -1,3 +1,4 @@
+
 // forside
 export default function LandingPage() {
   return (  
@@ -6,23 +7,22 @@ export default function LandingPage() {
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt repellat nesciunt, aspernatur, ratione natus unde laudantium sunt non iusto tempora harum nam quasi accusamus adipisci iure vero itaque blanditiis sit!
     </p>
 
-    <div className="grid">
-    <form action="/src/result" className="grid gap-3">
+      <form action="/result">
       <input 
-      className="border-solid border-2 border-gray-500 p-2"
+      className="border-solid border-2 p-2"
       type="text"
       name="url"
       placeholder="https://example.com"
       required/>
 
-    <button className="bg-sky-500 text-white p-3 rounded-xl "
+    <button className=" p-3 rounded-xl "
     type="submit" 
     value="check website">
       Check website
     </button>
     </form>
     </div>
-    </div>
+   
   );
 }
 
