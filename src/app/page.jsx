@@ -19,7 +19,7 @@ export default async function LandingPage({searchParams}){
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo molestiae deserunt soluta, nam quam numquam odio enim? Vero dolorum veniam necessitatibus, eum beatae quas obcaecati mollitia nihil quia tempora facere?
       </p>
 
-      <form action="/src/result">
+      <form action="/result">
       <input 
       type="text"
       name="url"
