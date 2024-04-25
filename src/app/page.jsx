@@ -9,13 +9,13 @@ export default function LandingPage() {
 
       <form action="/result">
       <input 
-      className="border-solid border-2 border-gray-500 p-2"
+      className="border-solid border-2 p-2"
       type="text"
       name="url"
       placeholder="https://example.com"
       required/>
 
-    <button className="bg-sky-500 text-white p-3 rounded-xl "
+    <button className=" p-3 rounded-xl "
     type="submit" 
     value="check website">
       Check website

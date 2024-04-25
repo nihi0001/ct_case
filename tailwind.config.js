@@ -6,14 +6,25 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      'orange': '#ff7733',
+      'lightBlue': '#e6fafe',
+      'mediumBlue': '#ff7733',
+      'darkBlue': '#69e3fc',
+      'lightYellow': '#ffea80',
+      'black': '#333333',
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+      
     },
   },
   plugins: [],
 };
+
+
+
+  // fontFamily:{
+  //   headingText: ['Libre-Baskerville']
+  //   pText:['Poppins']
+  // }
 
