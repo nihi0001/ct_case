@@ -1,12 +1,14 @@
 // rules single page
 
 
-function page() {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
-export default page
+export default async function Page({params}) {
+    
+  
+    return (
+      <main>
+      <ul>
+        <li></li>
+      </ul>
+      </main>
+    );
+  } 
