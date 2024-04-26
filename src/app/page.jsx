@@ -15,7 +15,7 @@ export default function LandingPage() {
       placeholder="https://example.com"
       required/>
 
-    <button className=" p-3 rounded-xl "
+    <button className=" p-3 rounded-xl bg-orange text-white"
     type="submit" 
     value="check website">
       Check website
