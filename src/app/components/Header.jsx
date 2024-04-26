@@ -17,7 +17,7 @@ export default function Header() {
                 </Link>
             </li>
             <li>
-                <Link href={"/regler"} prefetch={false}>Regler</Link>
+                <Link href={"/rules"} prefetch={false}>Regler</Link>
             </li>
         </ul>
     </nav>
