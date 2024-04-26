@@ -3,8 +3,8 @@
 export default function LandingPage() {
   return (  
     <div className="grid p-6 gap-x-6 text-center gap-3"> 
-    <h1>Product Name</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt repellat nesciunt, aspernatur, ratione natus unde laudantium sunt non iusto tempora harum nam quasi accusamus adipisci iure vero itaque blanditiis sit!
+    <h1>Web tilgængelighed</h1>
+    <p>Få dit website tjekket for tilgængelighed - gratis og øjeblikkeligt resultat!
     </p>
 
       <form action="/result">
