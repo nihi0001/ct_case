@@ -7,14 +7,11 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'orange': '#ff7733',
-      'lightBlue': '#e6fafe',
-      'mediumBlue': '#ff7733',
-      'darkBlue': '#69e3fc',
-      'lightYellow': '#ffea80',
       'beige': '#F7F6E8',
-      'white': '#FFFFFF',
+      'orange': '#ff7733',
       'bannerBlue': '#577492',
+      'navBlue': '#6F8FAF',
+      'white': '#FFFFFF',
       'black': '#333333'
     },
     extend: {

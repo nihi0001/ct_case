@@ -8,7 +8,7 @@ function loading() {
     <div className="flex justify-center items-center h-screen">
       
       <GridLoader
-      color="blue"
+      color="#577492"
       loading={true}
       
       size={60}
