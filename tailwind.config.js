@@ -12,7 +12,10 @@ module.exports = {
       'mediumBlue': '#ff7733',
       'darkBlue': '#69e3fc',
       'lightYellow': '#ffea80',
-      'black': '#333333',
+      'beige': '#F7F6E8',
+      'white': '#FFFFFF',
+      'bannerBlue': '#577492',
+      'black': '#333333'
     },
     extend: {
       
