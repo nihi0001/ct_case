@@ -18,7 +18,9 @@ export default async function Page({params}) {
       <main>
         <div>
         <h1>{rule.rulename}</h1>
-        <h1>{rule.description}</h1>
+        <h2>{rule.impact}</h2>
+        <p>{rule.description}</p>
+        <p>{rule.issueType}</p>
         </div>
       </main>
     );
