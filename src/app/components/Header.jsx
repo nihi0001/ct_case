@@ -6,8 +6,14 @@ export default function Header() {
 
   return (
     <>
-    <nav className='fixed bottom-0 bg-yellow-100 w-full md:relative'>
-        <ul className='grid grid-cols-3 p-3 text-center items-center'>
+
+    <div className='bg-bannerBlue text-white p-1.5'>
+    <img src="/diversa.svg" alt="logo" height={70} width={70} className='fill-white'	/>
+    </div>
+
+    
+    <nav className='fixed bottom-0 bg-navBlue w-full md:relative'>
+        <ul className='grid grid-cols-3 p-1 text-center items-center text-white font-medium'>
             <li>
                 <Link href={"/"} prefetch={false}>Check Website</Link>
             </li>
@@ -24,4 +30,5 @@ export default function Header() {
     </>
   );
 }
+
 
