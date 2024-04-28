@@ -1,4 +1,6 @@
 "use client";
+import Link from 'next/link';
+
 
     export default function Error(){
         return (
@@ -14,8 +16,9 @@
         <h1>Vi kunne deværre ikke finde denne side</h1>
         </article>
     
-        <button className="bg-orange py-3 px-8 rounded-full text-white">Tilbage</button>
-    
+    <Link href="/">
+        <button className="bg-orange py-3 px-8 rounded-xl text-white mt-5">Tilbage</button>
+    </Link>
         
         </div>
         </div>
