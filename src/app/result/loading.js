@@ -15,7 +15,7 @@ function loading() {
       aria-label="Loading Spinner"
       data-testid="loader"/>
     </div>
-  )
+  );
 }
 
 export default loading

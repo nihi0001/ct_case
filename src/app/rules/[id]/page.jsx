@@ -1,15 +1,32 @@
 // rules single page
-import {data} from "../rules"
+import RulesComponent from "@/app/components/RulesComponent";
 
-export default async function Page({params}) {
-    const {id} = params;
-    const rule = data.find(rule => rule.rulename === id)
-  console.log(rule);
+export default async function GetRules() {
+
     return (
-      <main>
-      <ul>
-        <li>{rule.description}</li>
-      </ul>
-      </main>
+      <div>
+        <ul>
+          <RulesComponent />
+        </ul>
+      </div>
     );
   } 
+
+
+
+  // const {id} = params;
+  //   const rule = data.find(rule => rule.rulename === id);
+
+//   <main>
+//   <div>
+//     { data.map( rule => {
+//       return(
+//         <div key={data.id}>
+//           <strong>{rule.rulename}</strong>
+//           <br />
+//           {rule.description}
+//         </div>
+//       )
+//     })}
+//   </div>
+// </main>
