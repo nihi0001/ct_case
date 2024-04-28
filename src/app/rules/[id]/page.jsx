@@ -1,15 +1,27 @@
 // rules single page
-import {data} from "../rules"
+import { data } from "../rules"
+
+export async function generateStaticParams() {
+  return data.map((regl) => ({
+    id: regl.rulename,
+  }));
+}
 
 export default async function Page({params}) {
     const {id} = params;
-    const rule = data.find(rule => rule.rulename === id)
-  console.log(rule);
+    console.log(id)
+    const ruleFilter = data.filter(oneRule => oneRule.rulename === id);
+   const rule = ruleFilter[0]
+    
+
     return (
       <main>
-      <ul>
-        <li>{rule.description}</li>
-      </ul>
+        <div>
+        <h1>{rule.rulename}</h1>
+        <h1>{rule.description}</h1>
+        </div>
       </main>
     );
   } 
+
+
