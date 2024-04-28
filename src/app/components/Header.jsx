@@ -7,8 +7,8 @@ export default function Header() {
   return (
     <>
 
-    <div className='bg-bannerBlue text-white p-1.5'>
-    <img src="/diversa.svg" alt="logo" height={70} width={70} className='fill-white'	/>
+    <div className='bg-bannerBlue p-1.5'>
+    <img src="/diversa.svg" alt="logo" height={70} width={70}	/>
     </div>
 
     
