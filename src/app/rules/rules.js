@@ -1,19 +1,27 @@
 export const data = [
     {
       rulename: "image-alt",
-      description: "Ensures <img> elements have alternate text or a role of none or presentation"
+      description: "Image-alt ensures <img> elements have alternate text or a role of none or presentation",
+      impact: "Critical",
+      issueType: "failure, needs review"
     },
     {
       rulename: "html-has-lang",
-      description: "Ensures every HTML document has a lang attribute"
+      description: "Html-has-lang ensures every HTML document has a lang attribute",
+      impact: "Serious",
+      issueType: "failure"
     },
     {
       rulename: "heading-order",
-      description: "Ensures the order of headings is semantically correct"
+      description: "Heading-order ensures the order of headings is semantically correct",
+      impact: "Moderate",
+      issueType: "failure, needs review"
     },
     {
-      rulename: "inaplicacable",
-      description: "lorem ipsum4"
+      rulename: "color-contrast",
+      description: "Color-contrast ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      impact: "Serious",
+      issueType: "failure, needs review"
     },
   ];
   
