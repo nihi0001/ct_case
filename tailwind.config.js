@@ -12,6 +12,7 @@ module.exports = {
       'bannerBlue': '#577492',
       'navBlue': '#6F8FAF',
       'white': '#FFFFFF',
+      'input': '#F2FDFF',
       'black': '#333333'
     },
     extend: {
