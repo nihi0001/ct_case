@@ -2,6 +2,7 @@
 // forside
 export default function LandingPage() {
   return (  
+    <div className="flex justify-start max-h-screen p-24 gap-x-72">
     <div className="grid p-12 gap-x-6 gap-3 mt-20"> 
     <h1 className="tracking-widest text-xl font-normal	">Web tilgængelighed</h1>
     <img src="/diversa_frontpage.svg" alt="logo" height={300} width={300}	className="mb-10"/>
@@ -23,6 +24,11 @@ export default function LandingPage() {
       Se resultatet
     </button>
     </form>
+    </div>
+
+    <div className=" grid items-end ">
+      <img className="grid items-center" src="/accessibility-check.png" alt="check" width={500} height={500} />
+    </div>
     </div>
    
   );
