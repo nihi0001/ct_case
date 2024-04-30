@@ -13,7 +13,7 @@ import Link from 'next/link';
         </article>
     
         <article className="text-lg">
-        <h1>Vi kunne deværre ikke finde denne side</h1>
+        <h1>Vi kunne desværre ikke finde denne side</h1>
         </article>
     
     <Link href="/">
