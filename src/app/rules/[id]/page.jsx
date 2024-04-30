@@ -16,11 +16,12 @@ export default async function Page({params}) {
 
     return (
       <main>
-        <div>
-        <h1>{rule.rulename}</h1>
-        <h2>{rule.impact}</h2>
-        <p>{rule.longDescription}</p>
-        <p>{rule.issueType}</p>
+        <div className="p-8 md:p-72">
+        <h1 className="text-2xl font-semibold mb-4">{rule.rulename}</h1>
+        <hr className="color:black md:w-full" />
+        <h2 className="mt-4 text-xl">{rule.impact}</h2> <br />
+        <p className="text-xl">{rule.longDescription}</p> <br />
+        <p className="text-xl">{rule.issueType}</p>
         </div>
       </main>
     );

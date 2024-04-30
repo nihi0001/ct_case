@@ -2,7 +2,7 @@
 // forside
 export default function LandingPage() {
   return (  
-    <div className="grid md:justify-between md:flex md:max-h-screen md:p-24 md:gap-96 md:mt-20">
+    <div className="grid md:justify-evenly md:flex md:max-h-screen md:p-24 md:mt-20">
     <div className="grid p-10"> 
     <h1 className="tracking-widest text-xl font-normal">Web tilgængelighed</h1>
     <img src="/diversa_frontpage.svg" alt="logo" height={300} width={300}	className="mb-10"/>
@@ -26,8 +26,8 @@ export default function LandingPage() {
     </form>
     </div>
 
-    <div className="">
-      <img className="grid md:mr-72" src="/accessibility-check.png" alt="check" width={500} height={500} />
+    <div className="grid md:items-center">
+      <img className="" src="/accessibility-check.png" alt="check" width={400} height={400} />
     </div>
     </div>
    

@@ -23,7 +23,7 @@ export default function Header() {
                 </Link>
             </li>
             <li>
-                <Link className='flex' href={"/rules"} prefetch={false}>Regler</Link>
+                <Link className='flex' href={"/rules"} prefetch={false}>Regler for tilgængelighed</Link>
             </li>
         </ul>
     </nav>
