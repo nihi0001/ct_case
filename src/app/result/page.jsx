@@ -21,9 +21,12 @@ export default async function Page({ searchParams }) {
 
 
   return (
-    <main>
-      <h1>Report for {data.url.substring(0, 30)}...</h1>
-      <p>Found {data.violations.length} issues</p>
+    <main className="p-14">
+      <h1 className="text-3xl mb-8">Web resultat</h1>
+      <div>
+      <article className="grid grid-cols-2 gap-4">
+      <h1>Resultat for {data.url.substring(0, 30)}...</h1>
+      <p>Fandt {data.violations.length} fejl</p>
       <Image
         alt={data.url}
         src={data.screenshot.url}
@@ -31,13 +34,29 @@ export default async function Page({ searchParams }) {
         height={500}
       />
       <ResultScore data={webScore} />
-      <article>
-      <h2 className="text-lg">{majorError.length} Kritiske fejl</h2>
-
-      <h2 className="text-lg grow">{moderatError.length} Moderate fejl</h2>
-
-      <h2 className="text-lg">{minorError.length} Mindre fejl</h2>
       </article>
+      <article>
+        <h2>Fejltyper:</h2>
+
+        <details className="border-2">
+        <summary>
+      <h3 className="text-lg">{majorError.length} Kritiske fejl</h3>
+</summary>
+</details>
+
+<details className="border-2">
+<summary>
+      <h3 className="text-lg grow">{moderatError.length} Moderate fejl</h3>
+      </summary>
+      </details>
+
+      <details className="border-2">
+      <summary>
+      <h3 className="text-lg">{minorError.length} Mindre fejl</h3>
+      </summary>
+      </details>
+      </article>
+      </div>
     </main>
   );
 } 

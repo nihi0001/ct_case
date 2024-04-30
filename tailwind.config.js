@@ -13,7 +13,9 @@ module.exports = {
       'navBlue': '#6F8FAF',
       'white': '#FFFFFF',
       'input': '#F2FDFF',
-      'black': '#333333'
+      'black': '#333333',
+      'lightGrey': '#d9D8C5',
+      'darkGrey': '#6C6A56'
     },
     extend: {
       fontFamily:{

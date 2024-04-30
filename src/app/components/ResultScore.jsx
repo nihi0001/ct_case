@@ -4,7 +4,9 @@ import { useState, useEffect } from "react";
 function ResultScore({ data }) {
   const [value, setValue] = useState(0);
   const divStyle = {
-    background: `conic-gradient(color-mix(in hsl, red, green calc(${value} * 1%)) ${value * 3.6}deg, var(--colors-brand-beige-00) 0deg)`,
+   /*background: `conic-gradient(orange ${value * 3.6}deg, gainsboro 0)`,*/
+   background: `conic-gradient(#6C6A56 ${value * 3.6}deg, #d9D8C5 0)`,
+  
   };
 
   useEffect(() => {
