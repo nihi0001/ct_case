@@ -15,7 +15,7 @@ export default function Header() {
     <nav className='fixed bottom-0 bg-navBlue w-full md:relative'>
         <ul className='grid grid-cols-3 p-1 text-center items-center text-white font-medium'>
             <li>
-                <Link href={"/"} prefetch={false}>Check Website</Link>
+                <Link className='flex flex-row-reverse' href={"/"} prefetch={false}>Check Website</Link>
             </li>
             <li>
                 <Link className='inline-flex' href={"/"} prefetch={false}>
@@ -23,7 +23,7 @@ export default function Header() {
                 </Link>
             </li>
             <li>
-                <Link href={"/rules"} prefetch={false}>Regler</Link>
+                <Link className='flex' href={"/rules"} prefetch={false}>Regler</Link>
             </li>
         </ul>
     </nav>
