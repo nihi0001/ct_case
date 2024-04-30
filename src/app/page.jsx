@@ -3,7 +3,7 @@
 export default function LandingPage() {
   return (  
     <div className="grid md:justify-between md:flex md:max-h-screen md:p-24 md:gap-96 md:mt-20">
-    <div className="grid"> 
+    <div className="grid p-10"> 
     <h1 className="tracking-widest text-xl font-normal">Web tilgængelighed</h1>
     <img src="/diversa_frontpage.svg" alt="logo" height={300} width={300}	className="mb-10"/>
 
