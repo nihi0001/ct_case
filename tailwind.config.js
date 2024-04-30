@@ -16,7 +16,12 @@ module.exports = {
       'black': '#333333'
     },
     extend: {
-      
+      fontFamily:{
+        'pText':['var(--poppins)', 'sans-serif'],
+      },
+      fontWeight:{
+        'pText': 400,
+      }
     },
   },
   plugins: [],
