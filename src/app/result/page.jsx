@@ -1,6 +1,7 @@
 import { score } from "@/lib/calculatorResult";
- import Image from "next/image";
- import ResultScore from "@/app/components/ResultScore"
+import Image from "next/image";
+import ResultScore from "@/app/components/ResultScore"
+import Link from "next/link";
 
 // Revalidate route every 30 minutes
 //export const revalidate = 1800;
@@ -21,42 +22,58 @@ export default async function Page({ searchParams }) {
 
 
   return (
-    <main className="p-14">
-      <h1 className="text-3xl mb-8">Web resultat</h1>
-      <div>
-      <article className="grid grid-cols-2 gap-4">
-      <h1>Resultat for {data.url.substring(0, 30)}...</h1>
-      <p>Fandt {data.violations.length} fejl</p>
-      <Image
-        alt={data.url}
-        src={data.screenshot.url}
-        width={450}
-        height={500}
-      />
-      <ResultScore data={webScore} />
-      </article>
-      <article>
-        <h2>Fejltyper:</h2>
+    <main>
+      <div className="p-12">
+        <h1 className="text-3xl mb-8">Resultat for website</h1>
+        <div>
+          <article className="grid grid-cols-2 gap-4">
+            <h1>Resultat for {data.url.substring(0, 30)}...</h1>
+            <p>Fandt {data.violations.length} typer fejl</p>
+            <Image
+              alt= "billede af hjemmesiden som er blevet testet"
+              src={data.screenshot.url}
+              width={450}
+              height={500}
+            />
+            <ResultScore data={webScore} />
+           
+          </article>
+        </div> 
+        </div>
 
-        <details className="border-2">
-        <summary>
-      <h3 className="text-lg">{majorError.length} Kritiske fejl</h3>
-</summary>
-</details>
+        <div className="bg-lightGrey">
+          <article className="p-12 items-center max-w-screen-lg mt-12">
 
-<details className="border-2">
-<summary>
-      <h3 className="text-lg grow">{moderatError.length} Moderate fejl</h3>
-      </summary>
-      </details>
+            <h2 className="text-3xl mb-8 ">Fejltyper:</h2>
 
-      <details className="border-2">
-      <summary>
-      <h3 className="text-lg">{minorError.length} Mindre fejl</h3>
-      </summary>
-      </details>
-      </article>
-      </div>
+            <details className="border-b mb-6">
+              <summary>
+                <span className="text-lg">{majorError.length} Kritiske fejl</span>
+
+              </summary>
+              <p className="mb-4 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti cum accusamus excepturi dolorem dolore eligendi molestias eum repellat alias dignissimos quia impedit, esse vitae nisi soluta accusantium corporis iste! Consequuntur?</p>
+              <button className="bg-orange text-white text-base p-0.5 px-4 rounded-xl mb-10">læs mere</button>
+            </details>
+
+            <details className="border-b mb-6">
+              <summary>
+                <span className="text-lg grow">{moderatError.length} Moderate fejl</span>
+               
+              </summary>
+              <p className="mb-4 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti cum accusamus excepturi dolorem dolore eligendi molestias eum repellat alias dignissimos quia impedit, esse vitae nisi soluta accusantium corporis iste! Consequuntur?</p>
+              <button className="bg-orange text-white text-base p-0.5 px-4 rounded-xl mb-10">læs mere</button>
+            </details>
+
+            <details className="border-b mb-6">
+              <summary>
+                <span className="text-lg">{minorError.length} Mindre fejl</span>
+                
+              </summary>
+              <p className="mb-4 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti cum accusamus excepturi dolorem dolore eligendi molestias eum repellat alias dignissimos quia impedit, esse vitae nisi soluta accusantium corporis iste! Consequuntur?</p>
+              <button className="bg-orange text-white text-base p-0.5 px-4 rounded-xl mb-10">læs mere</button>
+            </details>
+          </article>
+        </div>
     </main>
   );
 } 

@@ -19,7 +19,7 @@ export default async function Page({params}) {
         <div>
         <h1>{rule.rulename}</h1>
         <h2>{rule.impact}</h2>
-        <p>{rule.description}</p>
+        <p>{rule.longDescription}</p>
         <p>{rule.issueType}</p>
         </div>
       </main>
