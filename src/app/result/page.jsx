@@ -1,5 +1,5 @@
 import { score } from "@/lib/calculatorResult";
-import {data} from "./rules"
+import { data } from "../rules/rules";
 import Image from "next/image";
 import ResultScore from "@/app/components/ResultScore"
 import Link from "next/link";
@@ -53,9 +53,15 @@ export default async function Page({ searchParams }) {
 
               </summary>
               <p className="mb-4 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti cum accusamus excepturi dolorem dolore eligendi molestias eum repellat alias dignissimos quia impedit, esse vitae nisi soluta accusantium corporis iste! Consequuntur?</p>
-              <button className="bg-orange text-white text-base p-0.5 px-4 rounded-xl mb-10"><Link href={`/rules/${rule.rulename}`} prefetch={false}>
+              {data.map(rule => (
+          <li key={rule.rulename}className="flex items-center justify-between p-2 border-b text-lg" >{rule.rulename}
+          <button className="bg-orange text-white text-base p-0.5 px-4 rounded-xl"><Link href={`/rules/${rule.rulename}`} prefetch={false}>
             Læs mere
-            </Link></button>
+            </Link>
+            </button>
+          </li>
+          
+        ))}
             </details>
 
             <details className="border-b mb-6">
