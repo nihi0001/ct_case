@@ -16,7 +16,7 @@ module.exports = {
     },
     extend: {
       fontFamily:{
-        'pText':['Poppins', 'sans-serif'],
+        'pText':['var(--poppins)', 'sans-serif'],
       },
       fontWeight:{
         'pText': 400,
