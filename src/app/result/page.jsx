@@ -68,7 +68,7 @@ export default async function Page({ searchParams }) {
             Læs mere
             </Link></button>
             </details>
-
+            
             <details className="border-b mb-6">
               <summary>
                 <span className="text-lg">{minorError.length} Mindre fejl</span>
