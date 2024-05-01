@@ -7,18 +7,18 @@ export default function LandingPage() {
     <h1 className="tracking-widest text-xl font-normal">Web tilgængeligheds validator</h1>
     <img src="/diversa_frontpage.svg" alt="logo" height={300} width={300}	className="mb-12 mt-2"/>
 
-    <p className="text-2xl mb-7 max-w-md">Få dit website tjekket for tilgængelighed - <span className="text-orange">gratis og øjeblikkeligt resultat!</span>
+    <p className="text-2xl mb-7">Få dit website tjekket for tilgængelighed - <br /> <span className="text-orange">gratis og øjeblikkeligt resultat!</span>
     </p>
 
-      <form action="/result" className="flex flex-col">
+      <form action="/result" className="flex flex-col ">
       <input 
-      className="border border-1 rounded-md p-3 bg-input text-base w-full"
+      className="border border-1 rounded-md p-3 bg-input text-base max-w-full"
       type="text"
       name="url"
       placeholder="https://example.com"
       required/>
 
-    <button className=" p-3 rounded-xl bg-orange text-white mt-3  max-w-72"
+    <button className=" p-3 rounded-xl bg-orange text-white mt-3 max-w-72"
     type="submit" 
     value="check website">
       Se resultatet
