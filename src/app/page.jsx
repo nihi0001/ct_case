@@ -2,10 +2,10 @@
 // forside
 export default function LandingPage() {
   return (  
-    <div className="grid md:justify-evenly md:flex md:max-h-screen md:p-24 md:mt-20">
+    <div className="grid md:justify-evenly md:flex md:max-h-screen md:p-24 md:mt-10">
     <div className="grid p-10"> 
-    <h1 className="tracking-widest text-xl font-normal">Web tilgængelighed</h1>
-    <img src="/diversa_frontpage.svg" alt="logo" height={300} width={300}	className="mb-10"/>
+    <h1 className="tracking-widest text-xl font-normal">Web tilgængeligheds validator</h1>
+    <img src="/diversa_frontpage.svg" alt="logo" height={300} width={300}	className="mb-12 mt-2"/>
 
     <p className="text-2xl mb-7 max-w-md">Få dit website tjekket for tilgængelighed - <span className="text-orange">gratis og øjeblikkeligt resultat!</span>
     </p>
