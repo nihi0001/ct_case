@@ -27,7 +27,7 @@ export default function LandingPage() {
     </div>
 
     <div className="grid md:items-center">
-      <img className="" src="/accessibility-check.png" alt="check" width={400} height={400} />
+      <img className="" src="/computer-check.png" alt="check" width={400} height={400} />
     </div>
     </div>
    
