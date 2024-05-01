@@ -25,20 +25,23 @@ export default async function Page({ searchParams }) {
 
   return (
     <main>
-      <div className="p-12">
-        <h1 className="text-3xl mb-8">Resultat for website</h1>
+      <div className="p-16">
+        <h1 className="text-4xl font-semibold mb-12">Resultat for website</h1>
         <div>
           <article className="grid grid-cols-2 gap-4">
+<section>
             <h1>Resultat for {resultData.url.substring(0, 30)}...</h1>
-            <p>Fandt {resultData.violations.length} typer fejl</p>
+           
             <Image
               alt="billede af hjemmesiden som er blevet testet"
               src={resultData.screenshot.url}
               width={450}
               height={500}
             />
+            </section>
+            <section>
             <ResultScore resultData={webScore} />
-
+            </section>
           </article>
         </div>
       </div>
@@ -55,7 +58,7 @@ export default async function Page({ searchParams }) {
             </summary>
             {majorError.map(
               (oneRule) => {
-                return <div key={oneRule.id}> <h2>{oneRule.id}</h2>
+                return <div className="p-3" key={oneRule.id}> <h2 className="mt-4 font-medium text-base">{oneRule.id}</h2>
                 <p className="mb-4 mt-4">{oneRule.description}</p>
 
 
@@ -75,12 +78,13 @@ export default async function Page({ searchParams }) {
             </summary>
             {moderatError.map(
               (oneRule) => {
-                return <div key={oneRule.id}> <h2>{oneRule.id}</h2>
-                <p className="mb-4 mt-4">{oneRule.description}</p>
+                return <div className="p-3" key={oneRule.id}> 
+                <h2 className="mt-4 font-medium text-base">{oneRule.id}</h2>
+                <p className="mb-4 mt-4 text-sm">{oneRule.description}</p>
 
 
 
-                  <Link className="bg-orange text-white text-base p-0.5 px-4 rounded-xl" href={`/rules/${oneRule.id}`} prefetch={false}>
+                  <Link className="bg-orange text-white text-base p-0.5 px-4 rounded-xl mb-7" href={`/rules/${oneRule.id}`} prefetch={false}>
                     Læs mere
                   </Link>
 
@@ -96,8 +100,8 @@ export default async function Page({ searchParams }) {
             </summary>
             {minorError.map(
               (oneRule) => {
-                return <div key={oneRule.id}> <h2>{oneRule.id}</h2>
-                <p className="mb-4 mt-4">{oneRule.description}</p>
+                return <div className="p-3" key={oneRule.id}> <h2 className="mt-4 font-medium text-base">{oneRule.id}</h2>
+                <p className="mb-4 mt-4 text-sm">{oneRule.description}</p>
 
 
 
