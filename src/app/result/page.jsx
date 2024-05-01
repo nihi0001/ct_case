@@ -12,15 +12,21 @@ export default async function Page({ searchParams }) {
   const response = await fetch(
     `https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`
   );
-  const data = await response.json();
+  const resultData = await response.json();
 
 
-  const total = score(data);
+  const total = score(resultData);
   const webScore = total[0];
   const majorError = total[1];
   const moderatError = total[2];
   const minorError = total[3];
 
+
+    const {id} = params;
+    console.log(id)
+    const ruleFilter = data.filter(oneRule => oneRule.rulename === id);
+   const rule = ruleFilter[0]
+    
 
   return (
     <main>
@@ -28,15 +34,15 @@ export default async function Page({ searchParams }) {
         <h1 className="text-3xl mb-8">Resultat for website</h1>
         <div>
           <article className="grid grid-cols-2 gap-4">
-            <h1>Resultat for {data.url.substring(0, 30)}...</h1>
-            <p>Fandt {data.violations.length} typer fejl</p>
+            <h1>Resultat for {resultData.url.substring(0, 30)}...</h1>
+            <p>Fandt {resultData.violations.length} typer fejl</p>
             <Image
               alt= "billede af hjemmesiden som er blevet testet"
-              src={data.screenshot.url}
+              src={resultData.screenshot.url}
               width={450}
               height={500}
             />
-            <ResultScore data={webScore} />
+            <ResultScore resultData={webScore} />
            
           </article>
         </div> 
@@ -53,7 +59,10 @@ export default async function Page({ searchParams }) {
 
               </summary>
               <p className="mb-4 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti cum accusamus excepturi dolorem dolore eligendi molestias eum repellat alias dignissimos quia impedit, esse vitae nisi soluta accusantium corporis iste! Consequuntur?</p>
-              {data.map(rule => (
+              
+
+
+             {data.map(rule => (
           <li key={rule.rulename}className="flex items-center justify-between p-2 border-b text-lg" >{rule.rulename}
           <button className="bg-orange text-white text-base p-0.5 px-4 rounded-xl"><Link href={`/rules/${rule.rulename}`} prefetch={false}>
             Læs mere
