@@ -45,7 +45,7 @@ function ResultScore({ resultData }) {
   return (
     <div className="flex flex-col items-center justify-center">
       <article>
-        <figure className="place-self-center grid place-items-center relative">
+        <figure className="place-self-center grid place-items-center relative -z-20">
           <div style={divStyle} className="w-[235px] aspect-square rounded-full"></div>
           <div className="bg-beige w-[200px] aspect-square rounded-full absolute"></div>
           <p className="absolute text-2xl ">{value}%</p>

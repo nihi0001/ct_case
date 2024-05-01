@@ -2,6 +2,7 @@ import { score } from "@/lib/calculatorResult";
 import Image from "next/image";
 import ResultScore from "@/app/components/ResultScore"
 import Link from "next/link";
+import { Divider } from "antd";
 
 // Revalidate route every 30 minutes
 //export const revalidate = 1800;
@@ -25,12 +26,12 @@ export default async function Page({ searchParams }) {
 
   return (
     <main>
-      <div className="p-16">
+      <div className="p-16 mt-12">
         <h1 className="text-4xl font-semibold mb-12">Resultat for website</h1>
         <div>
-          <article className="grid grid-cols-2 gap-4">
+          <article className="grid grid-cols-1 md:grid-cols-2 gap-16">
 <section>
-            <h1>Resultat for {resultData.url.substring(0, 30)}...</h1>
+            <h1 className="mb-5 text-2xl">Resultat for {resultData.url.substring(0, 30)}...</h1>
            
             <Image
               alt="billede af hjemmesiden som er blevet testet"
@@ -47,9 +48,9 @@ export default async function Page({ searchParams }) {
       </div>
 
       <div className="bg-lightGrey">
-        <article className="p-12 items-center max-w-screen-lg mt-12">
+        <article className="p-12 items-center max-w-screen-lg mt-5">
 
-          <h2 className="text-3xl mb-8 ">Fejltyper:</h2>
+          <h2 className="text-3xl mb-8 ">Fejltyper på websitet:</h2>
 
           <details className="border-b mb-6">
             <summary>
@@ -63,7 +64,7 @@ export default async function Page({ searchParams }) {
 
 
 
-                  <Link className="bg-orange text-white text-base p-0.5 px-4 rounded-xl" href={`/rules/${oneRule.id}`} prefetch={false}>
+                  <Link className="bg-orange text-white text-base  p-1 px-4  rounded-xl" href={`/rules/${oneRule.id}`} prefetch={false}>
                     Læs mere
                   </Link>
 
@@ -84,7 +85,7 @@ export default async function Page({ searchParams }) {
 
 
 
-                  <Link className="bg-orange text-white text-base p-0.5 px-4 rounded-xl mb-7" href={`/rules/${oneRule.id}`} prefetch={false}>
+                  <Link className="bg-orange text-white text-base p-1 px-4 rounded-xl mb-7" href={`/rules/${oneRule.id}`} prefetch={false}>
                     Læs mere
                   </Link>
 
@@ -105,7 +106,7 @@ export default async function Page({ searchParams }) {
 
 
 
-                  <Link className="bg-orange text-white text-base p-0.5 px-4 rounded-xl" href={`/rules/${oneRule.id}`} prefetch={false}>
+                  <Link className="bg-orange text-white text-base p-1 px-4  rounded-xl" href={`/rules/${oneRule.id}`} prefetch={false}>
                     Læs mere
                   </Link>
 

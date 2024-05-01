@@ -12,12 +12,12 @@ import Link from 'next/link';
         <h1>404</h1>
         </article>
     
-        <article className="text-lg">
+        <article className="text-xl font-medium">
         <h1>Vi kunne desværre ikke finde denne side</h1>
         </article>
     
     <Link href="/">
-        <button className="bg-orange py-3 px-8 rounded-xl text-white mt-5">Tilbage</button>
+        <button className="bg-orange py-3 px-8 rounded-xl text-white mt-5 hover:bg-bannerBlue">Tilbage til forsiden</button>
     </Link>
         
         </div>
