@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 
-function ResultScore({ data }) {
+function ResultScore({ resultData }) {
   const [value, setValue] = useState(0);
   const divStyle = {
    /*background: `conic-gradient(orange ${value * 3.6}deg, gainsboro 0)`,*/
@@ -13,7 +13,7 @@ function ResultScore({ data }) {
   useEffect(() => {
     const counter = setInterval(() => {
       setValue((prevValue) => {
-        if (prevValue < data) {
+        if (prevValue < resultData) {
           return prevValue + 1;
         } else {
           clearInterval(counter);

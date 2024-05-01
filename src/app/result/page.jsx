@@ -1,5 +1,4 @@
 import { score } from "@/lib/calculatorResult";
-import { data } from "../rules/rules";
 import Image from "next/image";
 import ResultScore from "@/app/components/ResultScore"
 import Link from "next/link";
@@ -13,7 +12,7 @@ export default async function Page({ searchParams }) {
     `https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`
   );
   const resultData = await response.json();
-
+  console.log(resultData);
 
   const total = score(resultData);
   const webScore = total[0];
@@ -21,12 +20,8 @@ export default async function Page({ searchParams }) {
   const moderatError = total[2];
   const minorError = total[3];
 
+  console.log(webScore);
 
-    const {id} = params;
-    console.log(id)
-    const ruleFilter = data.filter(oneRule => oneRule.rulename === id);
-   const rule = ruleFilter[0]
-    
 
   return (
     <main>
@@ -37,65 +32,89 @@ export default async function Page({ searchParams }) {
             <h1>Resultat for {resultData.url.substring(0, 30)}...</h1>
             <p>Fandt {resultData.violations.length} typer fejl</p>
             <Image
-              alt= "billede af hjemmesiden som er blevet testet"
+              alt="billede af hjemmesiden som er blevet testet"
               src={resultData.screenshot.url}
               width={450}
               height={500}
             />
             <ResultScore resultData={webScore} />
-           
-          </article>
-        </div> 
-        </div>
 
-        <div className="bg-lightGrey">
-          <article className="p-12 items-center max-w-screen-lg mt-12">
-
-            <h2 className="text-3xl mb-8 ">Fejltyper:</h2>
-
-            <details className="border-b mb-6">
-              <summary>
-                <span className="text-lg">{majorError.length} Kritiske fejl</span>
-
-              </summary>
-              <p className="mb-4 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti cum accusamus excepturi dolorem dolore eligendi molestias eum repellat alias dignissimos quia impedit, esse vitae nisi soluta accusantium corporis iste! Consequuntur?</p>
-              
-
-
-             {data.map(rule => (
-          <li key={rule.rulename}className="flex items-center justify-between p-2 border-b text-lg" >{rule.rulename}
-          <button className="bg-orange text-white text-base p-0.5 px-4 rounded-xl"><Link href={`/rules/${rule.rulename}`} prefetch={false}>
-            Læs mere
-            </Link>
-            </button>
-          </li>
-          
-        ))}
-            </details>
-
-            <details className="border-b mb-6">
-              <summary>
-                <span className="text-lg grow">{moderatError.length} Moderate fejl</span>
-               
-              </summary>
-              <p className="mb-4 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti cum accusamus excepturi dolorem dolore eligendi molestias eum repellat alias dignissimos quia impedit, esse vitae nisi soluta accusantium corporis iste! Consequuntur?</p>
-              <button className="bg-orange text-white text-base p-0.5 px-4 rounded-xl mb-10"><Link href={`/rules/${rule.rulename}`} prefetch={false}>
-            Læs mere
-            </Link></button>
-            </details>
-            
-            <details className="border-b mb-6">
-              <summary>
-                <span className="text-lg">{minorError.length} Mindre fejl</span>
-                
-              </summary>
-              <p className="mb-4 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti cum accusamus excepturi dolorem dolore eligendi molestias eum repellat alias dignissimos quia impedit, esse vitae nisi soluta accusantium corporis iste! Consequuntur?</p>
-              <button className="bg-orange text-white text-base p-0.5 px-4 rounded-xl mb-10"><Link href={`/rules/${rule.rulename}`} prefetch={false}>
-            Læs mere
-            </Link></button>
-            </details>
           </article>
         </div>
+      </div>
+
+      <div className="bg-lightGrey">
+        <article className="p-12 items-center max-w-screen-lg mt-12">
+
+          <h2 className="text-3xl mb-8 ">Fejltyper:</h2>
+
+          <details className="border-b mb-6">
+            <summary>
+              <span className="text-lg">{majorError.length} Kritiske fejl</span>
+
+            </summary>
+            {majorError.map(
+              (oneRule) => {
+                return <div key={oneRule.id}> <h2>{oneRule.id}</h2>
+                <p className="mb-4 mt-4">{oneRule.description}</p>
+
+
+
+                  <Link className="bg-orange text-white text-base p-0.5 px-4 rounded-xl" href={`/rules/${oneRule.id}`} prefetch={false}>
+                    Læs mere
+                  </Link>
+
+                </div>
+              }
+            )}
+          </details>
+          <details className="border-b mb-6">
+            <summary>
+              <span className="text-lg grow">{moderatError.length} Moderate fejl</span>
+
+            </summary>
+            {moderatError.map(
+              (oneRule) => {
+                return <div key={oneRule.id}> <h2>{oneRule.id}</h2>
+                <p className="mb-4 mt-4">{oneRule.description}</p>
+
+
+
+                  <Link className="bg-orange text-white text-base p-0.5 px-4 rounded-xl" href={`/rules/${oneRule.id}`} prefetch={false}>
+                    Læs mere
+                  </Link>
+
+                </div>
+              }
+            )}
+          </details>
+
+          <details className="border-b mb-6">
+            <summary>
+              <span className="text-lg">{minorError.length} Mindre fejl</span>
+
+            </summary>
+            {minorError.map(
+              (oneRule) => {
+                return <div key={oneRule.id}> <h2>{oneRule.id}</h2>
+                <p className="mb-4 mt-4">{oneRule.description}</p>
+
+
+
+                  <Link className="bg-orange text-white text-base p-0.5 px-4 rounded-xl" href={`/rules/${oneRule.id}`} prefetch={false}>
+                    Læs mere
+                  </Link>
+
+                </div>
+              }
+            )}
+          </details>
+
+
+
+
+        </article>
+      </div>
     </main>
   );
 } 
