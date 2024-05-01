@@ -2,7 +2,6 @@ import { score } from "@/lib/calculatorResult";
 import Image from "next/image";
 import ResultScore from "@/app/components/ResultScore"
 import Link from "next/link";
-import { Divider } from "antd";
 
 // Revalidate route every 30 minutes
 //export const revalidate = 1800;
