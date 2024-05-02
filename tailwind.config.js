@@ -15,7 +15,9 @@ module.exports = {
       'input': '#F2FDFF',
       'black': '#333333',
       'lightGrey': '#d9D8C5',
-      'darkGrey': '#6C6A56'
+      'darkGrey': '#6C6A56',
+      'grey-80': '#333333',
+      'grey-60': '#666666',
     },
     extend: {
       fontFamily:{

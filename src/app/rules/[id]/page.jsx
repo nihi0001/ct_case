@@ -36,9 +36,9 @@ export default async function Page({params}) {
         <div className="p-10 md:border-solid md:border-black md:border-2 md:p-20 md:w-7/12 md:m-auto">
         <h1 className="text-2xl font-semibold mb-4">{rule.rulename}</h1>
         <hr className="color:black md:w-full" />
-        <h2 className="mt-4 text-xl"><span className="font-medium">Status: <br /></span>{rule.impact}</h2> <br />
-        <p className="text-xl"><span className="font-medium">Beskrivelse: </span><br />{rule.longDescription}</p> <br />
-        <p className=" text-xl"><span className="font-medium">Fejltype: </span><br />{rule.issueType}</p>
+        <h2 className="mt-4 text-xl text-grey-80"><span className="text-2xl font-medium text-grey-80">Status: </span>{rule.impact}</h2> <br />
+        <p className="text-xl text-grey-80"><span className="text-2xl font-medium text-grey-80">Beskrivelse: <br /> </span>{rule.longDescription}</p> <br />
+        <p className=" text-xl text-grey-80"><span className="text-2xl font-medium text-grey-80">Fejltype: <br /> </span>{rule.issueType}</p>
         </div>
       </main>
     );

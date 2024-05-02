@@ -4,7 +4,7 @@ import ResultScore from "@/app/components/ResultScore"
 import Link from "next/link";
 
 // Revalidate route every 30 minutes
-//export const revalidate = 1800;
+export const revalidate = 1800;
 
 export default async function Page({ searchParams }) {
   const params = new URLSearchParams(searchParams);
