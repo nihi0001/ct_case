@@ -17,8 +17,9 @@ export default function LandingPage() {
       className="border border-1 rounded-md p-3 bg-input text-base w-4/5"
       type="text"
       name="url"
-      placeholder="https://example.com"
+      placeholder="example.com"
       required/>
+      {/* <p>Husk at indsætte en hjemmeside med https://</p> */}
 
       <button 
       className=" p-3 rounded-xl bg-orange hover:bg-bannerBlue text-white mt-3 w-60"
