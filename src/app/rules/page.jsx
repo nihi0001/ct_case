@@ -11,7 +11,7 @@ export default async function Page() {
      console.log(data);
   
     return (
-      <main className="p-6 md:p-16 items-center max-w-screen-lg mt-12">
+      <main className="p-6 md:p-16 items-center max-w-screen-lg mt-12 mb-24 md:mb-0">
        <div>
         <h1 className="text-2xl  md:text-4xl font-semibold mb-12 ">Regler for webtilængelighed </h1>
         <p className="text-base text-grey-80 mb-7 max-w-[38rem] md-w-none">Webtilgængelighed garanterer, at mennesker med handicap eller funktionsnedsættelser kan bruge offentlige hjemmesider og mobilapps uden barrierer. Dette indebærer at sikre, at indholdet er let at navigere, forståeligt og tilgængeligt for alle. </p>
