@@ -23,7 +23,7 @@ export default function LandingPage() {
       className="border border-1 rounded-md p-3 bg-input text-base w-4/5"
       type="text"
       name="url"
-      placeholder="example.com"
+      placeholder="Eksempel.dk"
       required/>
       {/* <p>Husk at indsætte en hjemmeside med https://</p> */}
 
