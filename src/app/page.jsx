@@ -22,6 +22,7 @@ export default function LandingPage() {
       <input 
       className="border border-1 rounded-md p-3 bg-input text-base w-4/5"
       type="text"
+      pattern="(https://)?[a-z]+.[a-z]+"
       name="url"
       placeholder="example.com"
       required/>
