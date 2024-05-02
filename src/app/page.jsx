@@ -9,8 +9,8 @@ export const metadata = {
 export default function LandingPage() {
   return (  
     <div className="grid md:justify-center md:flex md:max-h-screen md:p-24 md:mt-10 md:gap-72">
-    <div className="grid pt-20 p-10"> 
-    <h1 className="tracking-widest text-base text-grey-80 md:text-2xl font-normal">Web tilgængeligheds validator</h1>
+    <div className="grid pt-40 md:pt-10 p-10"> 
+    <h1 className="tracking-widest text-lg text-grey-80 md:text-2xl font-normal">Web tilgængeligheds validator</h1>
     <img src="/diversa_frontpage.svg" alt="logo" height={300} width={300}	className="mb-12 mt-2"/>
 
     <p className="text-xl text-grey-80 mb-7 md:text-3xl md:leading-normal">Få dit website tjekket for tilgængelighed - 
@@ -24,7 +24,7 @@ export default function LandingPage() {
       type="text"
       pattern="(https://)?[a-z]+.[a-z]+"
       name="url"
-      placeholder="Eksempel.dk"
+      placeholder="eksempel.dk"
       required/>
       {/* <p>Husk at indsætte en hjemmeside med https://</p> */}
 
@@ -38,7 +38,7 @@ export default function LandingPage() {
     </div>
 
     <div className="grid w-11/12 p-10 mb-16 md:m-0 md:items-center md:w-fit">
-      <img src="/computer-check.png" alt="check" width={400} height={400} />
+      <img src="/computer-check.png" alt="" width={400} height={400} className="hidden md:block" />
     </div>
     </div>
    
