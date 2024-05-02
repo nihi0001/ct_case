@@ -17,7 +17,7 @@ import Link from 'next/link';
         </article>
     
     <Link href="/">
-        <button className="bg-orange py-3 px-8 rounded-xl text-white mt-5 hover:bg-bannerBlue">Tilbage til forsiden</button>
+        <button className="bg-orange py-3 px-8 rounded-xl text-white mt-5 hover:bg-bannerBlue" aria-label='Gå tilbage til forsiden'>Tilbage til forsiden</button>
     </Link>
         
         </div>
