@@ -6,6 +6,12 @@ import Link from "next/link";
 // Revalidate route every 30 minutes
 //export const revalidate = 1800;
 
+export const metadata = {
+  title: "Resultat side",
+  description: "Se hjemmesidens resultat og de forskellige fejltyper, som du kan rette for at gøre den mere tilgængelighed",
+};
+
+
 export default async function Page({ searchParams }) {
   const params = new URLSearchParams(searchParams);
   const response = await fetch(

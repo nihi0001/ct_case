@@ -1,5 +1,11 @@
 
 // forside
+
+export const metadata = {
+  title: "Forside",
+  description: "Tjek dit website for web tilgængelighed",
+};
+
 export default function LandingPage() {
   return (  
     <div className="grid md:justify-center md:flex md:max-h-screen md:p-24 md:mt-10 md:gap-72">
