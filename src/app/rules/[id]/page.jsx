@@ -18,7 +18,7 @@ export default async function Page({params}) {
     return (
       <main className="">
         <div className="p-8 md:p-16 md:px-44">
-        <ul className="bg-orange rounded-full w-16 p-3">
+        <ul className="bg-orange hover:bg-bannerBlue rounded-full w-16 p-3">
         <Link href={"/rules"} prefetch={false}>
         <svg 
         fill="white"

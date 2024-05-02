@@ -25,8 +25,8 @@ export default async function Page({ searchParams }) {
 
   return (
     <main>
-      <div className="pt-10 ml-6">
-        <ul className="bg-orange rounded-full w-16 p-3">
+      <div className="pt-10 ml-14">
+        <ul className="bg-orange hover:bg-bannerBlue rounded-full w-16 p-3">
         <Link href={"/"} prefetch={false}>
         <svg 
         fill="white"
