@@ -21,6 +21,7 @@ export default async function Page({params}) {
         <ul className="bg-orange rounded-full w-16 p-3">
         <Link href={"/rules"} prefetch={false}>
         <svg 
+        fill="white"
         width={40}
         height={40}
         xmlns="http://www.w3.org/2000/svg"
@@ -34,9 +35,9 @@ export default async function Page({params}) {
         <div className="p-10 md:border-solid md:border-black md:border-2 md:p-20 md:w-7/12 md:m-auto">
         <h1 className="text-2xl font-semibold mb-4">{rule.rulename}</h1>
         <hr className="color:black md:w-full" />
-        <h2 className="mt-4 text-xl"><span className="font-medium">Regler: <br /></span>{rule.impact}</h2> <br />
+        <h2 className="mt-4 text-xl"><span className="font-medium">Status: <br /></span>{rule.impact}</h2> <br />
         <p className="text-xl"><span className="font-medium">Beskrivelse: </span><br />{rule.longDescription}</p> <br />
-        <p className=" text-xl"><span className="font-medium">Effekt: </span><br />{rule.issueType}</p>
+        <p className=" text-xl"><span className="font-medium">Fejltype: </span><br />{rule.issueType}</p>
         </div>
       </main>
     );

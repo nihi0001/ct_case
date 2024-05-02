@@ -25,12 +25,27 @@ export default async function Page({ searchParams }) {
 
   return (
     <main>
-      <div className="p-16 mt-12">
+      <div className="pt-10 ml-6">
+        <ul className="bg-orange rounded-full w-16 p-3">
+        <Link href={"/"} prefetch={false}>
+        <svg 
+        fill="white"
+        width={40}
+        height={40}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512">
+        <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+        </svg> 
+        </Link>
+        </ul>
+      </div>
+
+      <div className="p-16">
         <h1 className="text-4xl font-semibold mb-12">Resultat for website</h1>
         <div>
           <article className="grid grid-cols-1 md:grid-cols-2 gap-16">
-<section>
-            <h1 className="mb-5 text-2xl">Resultat for {resultData.url.substring(0, 30)}...</h1>
+            <section>
+            <h1 className="mb-5 text-base md:text-2xl">Resultat for {resultData.url.substring(0, 30)}...</h1>
            
             <Image
               alt="billede af hjemmesiden som er blevet testet"
@@ -49,7 +64,7 @@ export default async function Page({ searchParams }) {
       <div className="bg-lightGrey">
         <article className="p-12 items-center max-w-screen-lg mt-5">
 
-          <h2 className="text-3xl mb-8 ">Fejltyper på websitet:</h2>
+          <h2 className="text-3xl mb-8">Fejltyper på websitet:</h2>
 
           <details className="border-b mb-6">
             <summary>
