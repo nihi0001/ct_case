@@ -24,7 +24,7 @@ export default function LandingPage() {
       type="text"
       pattern="(https://)?[a-z]+.[a-z]+"
       name="url"
-      placeholder="example.com"
+      placeholder="Eksempel.dk"
       required/>
       {/* <p>Husk at indsætte en hjemmeside med https://</p> */}
 
