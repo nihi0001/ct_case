@@ -2,6 +2,11 @@
 import { data } from "../rules"
 import Link from 'next/link';
 
+export const metadata = {
+  title: "Enkelte regel side",
+  description: "På denne side ser du en uddybende forklaring, for den enkelte regel og hvordan du løser den",
+};
+
 export async function generateStaticParams() {
   return data.map((regl) => ({
     id: regl.rulename,

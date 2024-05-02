@@ -2,6 +2,11 @@
 import Link from "next/link";
 import {data} from "./rules"
 
+export const metadata = {
+  title: "Regel siden",
+  description: "På denne side ser du en oversigt over regler for web tilgængelighed",
+};
+
 export default async function Page() {
      console.log(data);
   
